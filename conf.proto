@@ -1,0 +1,16 @@
+syntax = "proto3";
+package conf;
+
+message Configuration {
+    string name = 1;
+
+    string logFilePath = 2;
+    float threshold = 3;
+
+    enum Status {
+         START = 0;
+         STOP = 1;
+         QUIT = 2;
+    }
+    Status status = 4;
+}

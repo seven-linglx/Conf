@@ -1,0 +1,8 @@
+#+TITLE: Readme
+
+* Introduction
+基于protobuf(cpp)实现配置文件读取与保存功能,示例工程
+* Compile
+#+begin_src shell
+g++ -o main.exe main.cc conf.pb.cc `pkg-config --cflags --libs protobuf`
+#+end_src
