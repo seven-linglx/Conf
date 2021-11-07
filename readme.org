@@ -1,8 +1,12 @@
-#+TITLE: Readme
+#+TITLE: README of Conf
 
 * Introduction
 基于protobuf(cpp)实现配置文件读取与保存功能,示例工程
 * Compile
 #+begin_src shell
+# gen .h and .cc
+# protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/conf.proto
+cd Conf
+protoc conf.proto --cpp_out=./
 g++ -o main.exe main.cc conf.pb.cc `pkg-config --cflags --libs protobuf`
 #+end_src
